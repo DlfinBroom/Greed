@@ -99,6 +99,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaveFileDB.cs" />
+    <EmbeddedResource Include="frmCharacter.resx">
+      <DependentUpon>frmCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOpening.resx">
       <DependentUpon>frmOpening.cs</DependentUpon>
     </EmbeddedResource>
