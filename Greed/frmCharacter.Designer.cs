@@ -40,21 +40,21 @@
             this.lblMaxHealth = new System.Windows.Forms.Label();
             this.txtDisplayMaxHealth = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDisplayDefense = new System.Windows.Forms.TextBox();
+            this.lblDisplayDefense = new System.Windows.Forms.Label();
             this.txtDisplayMaxMana = new System.Windows.Forms.TextBox();
             this.lblMaxMana = new System.Windows.Forms.Label();
             this.gbxAttributes = new System.Windows.Forms.GroupBox();
-            this.lblDisplayDefense = new System.Windows.Forms.Label();
-            this.txtDisplayDefense = new System.Windows.Forms.TextBox();
-            this.lblDisplayStrength = new System.Windows.Forms.Label();
-            this.lblDisplayDexterity = new System.Windows.Forms.Label();
-            this.lblDisplayIntelligence = new System.Windows.Forms.Label();
-            this.lblDisplayFaith = new System.Windows.Forms.Label();
-            this.lblDisplaySpeed = new System.Windows.Forms.Label();
-            this.txtDisplayStrength = new System.Windows.Forms.TextBox();
-            this.txtDisplayDexterity = new System.Windows.Forms.TextBox();
-            this.txtDisplayIntelligence = new System.Windows.Forms.TextBox();
-            this.txtDisplayFaith = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDisplayFaith = new System.Windows.Forms.TextBox();
+            this.txtDisplayIntelligence = new System.Windows.Forms.TextBox();
+            this.txtDisplayDexterity = new System.Windows.Forms.TextBox();
+            this.txtDisplayStrength = new System.Windows.Forms.TextBox();
+            this.lblDisplaySpeed = new System.Windows.Forms.Label();
+            this.lblDisplayFaith = new System.Windows.Forms.Label();
+            this.lblDisplayIntelligence = new System.Windows.Forms.Label();
+            this.lblDisplayDexterity = new System.Windows.Forms.Label();
+            this.lblDisplayStrength = new System.Windows.Forms.Label();
             this.lbxDisplayParty = new System.Windows.Forms.ListBox();
             this.btnCreateCharacter = new System.Windows.Forms.Button();
             this.gbxFinishCreation = new System.Windows.Forms.GroupBox();
@@ -247,6 +247,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Base Stats:";
             // 
+            // txtDisplayDefense
+            // 
+            this.txtDisplayDefense.Enabled = false;
+            this.txtDisplayDefense.Location = new System.Drawing.Point(116, 42);
+            this.txtDisplayDefense.Name = "txtDisplayDefense";
+            this.txtDisplayDefense.Size = new System.Drawing.Size(34, 20);
+            this.txtDisplayDefense.TabIndex = 10;
+            // 
+            // lblDisplayDefense
+            // 
+            this.lblDisplayDefense.AutoSize = true;
+            this.lblDisplayDefense.Location = new System.Drawing.Point(21, 45);
+            this.lblDisplayDefense.Name = "lblDisplayDefense";
+            this.lblDisplayDefense.Size = new System.Drawing.Size(89, 13);
+            this.lblDisplayDefense.TabIndex = 10;
+            this.lblDisplayDefense.Text = "Starting Defense:";
+            // 
             // txtDisplayMaxMana
             // 
             this.txtDisplayMaxMana.Enabled = false;
@@ -283,58 +300,44 @@
             this.gbxAttributes.TabStop = false;
             this.gbxAttributes.Text = "Attributes:";
             // 
-            // lblDisplayDefense
+            // textBox1
             // 
-            this.lblDisplayDefense.AutoSize = true;
-            this.lblDisplayDefense.Location = new System.Drawing.Point(21, 45);
-            this.lblDisplayDefense.Name = "lblDisplayDefense";
-            this.lblDisplayDefense.Size = new System.Drawing.Size(89, 13);
-            this.lblDisplayDefense.TabIndex = 10;
-            this.lblDisplayDefense.Text = "Starting Defense:";
+            this.textBox1.Location = new System.Drawing.Point(74, 123);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(37, 20);
+            this.textBox1.TabIndex = 9;
             // 
-            // txtDisplayDefense
+            // txtDisplayFaith
             // 
-            this.txtDisplayDefense.Enabled = false;
-            this.txtDisplayDefense.Location = new System.Drawing.Point(116, 42);
-            this.txtDisplayDefense.Name = "txtDisplayDefense";
-            this.txtDisplayDefense.Size = new System.Drawing.Size(34, 20);
-            this.txtDisplayDefense.TabIndex = 10;
+            this.txtDisplayFaith.Enabled = false;
+            this.txtDisplayFaith.Location = new System.Drawing.Point(74, 97);
+            this.txtDisplayFaith.Name = "txtDisplayFaith";
+            this.txtDisplayFaith.Size = new System.Drawing.Size(37, 20);
+            this.txtDisplayFaith.TabIndex = 8;
             // 
-            // lblDisplayStrength
+            // txtDisplayIntelligence
             // 
-            this.lblDisplayStrength.AutoSize = true;
-            this.lblDisplayStrength.Location = new System.Drawing.Point(18, 22);
-            this.lblDisplayStrength.Name = "lblDisplayStrength";
-            this.lblDisplayStrength.Size = new System.Drawing.Size(50, 13);
-            this.lblDisplayStrength.TabIndex = 0;
-            this.lblDisplayStrength.Text = "Strength:";
+            this.txtDisplayIntelligence.Enabled = false;
+            this.txtDisplayIntelligence.Location = new System.Drawing.Point(74, 71);
+            this.txtDisplayIntelligence.Name = "txtDisplayIntelligence";
+            this.txtDisplayIntelligence.Size = new System.Drawing.Size(37, 20);
+            this.txtDisplayIntelligence.TabIndex = 7;
             // 
-            // lblDisplayDexterity
+            // txtDisplayDexterity
             // 
-            this.lblDisplayDexterity.AutoSize = true;
-            this.lblDisplayDexterity.Location = new System.Drawing.Point(17, 48);
-            this.lblDisplayDexterity.Name = "lblDisplayDexterity";
-            this.lblDisplayDexterity.Size = new System.Drawing.Size(51, 13);
-            this.lblDisplayDexterity.TabIndex = 1;
-            this.lblDisplayDexterity.Text = "Dexterity:";
+            this.txtDisplayDexterity.Enabled = false;
+            this.txtDisplayDexterity.Location = new System.Drawing.Point(74, 45);
+            this.txtDisplayDexterity.Name = "txtDisplayDexterity";
+            this.txtDisplayDexterity.Size = new System.Drawing.Size(37, 20);
+            this.txtDisplayDexterity.TabIndex = 6;
             // 
-            // lblDisplayIntelligence
+            // txtDisplayStrength
             // 
-            this.lblDisplayIntelligence.AutoSize = true;
-            this.lblDisplayIntelligence.Location = new System.Drawing.Point(4, 74);
-            this.lblDisplayIntelligence.Name = "lblDisplayIntelligence";
-            this.lblDisplayIntelligence.Size = new System.Drawing.Size(64, 13);
-            this.lblDisplayIntelligence.TabIndex = 2;
-            this.lblDisplayIntelligence.Text = "Intelligence:";
-            // 
-            // lblDisplayFaith
-            // 
-            this.lblDisplayFaith.AutoSize = true;
-            this.lblDisplayFaith.Location = new System.Drawing.Point(35, 100);
-            this.lblDisplayFaith.Name = "lblDisplayFaith";
-            this.lblDisplayFaith.Size = new System.Drawing.Size(33, 13);
-            this.lblDisplayFaith.TabIndex = 3;
-            this.lblDisplayFaith.Text = "Faith:";
+            this.txtDisplayStrength.Enabled = false;
+            this.txtDisplayStrength.Location = new System.Drawing.Point(74, 19);
+            this.txtDisplayStrength.Name = "txtDisplayStrength";
+            this.txtDisplayStrength.Size = new System.Drawing.Size(37, 20);
+            this.txtDisplayStrength.TabIndex = 5;
             // 
             // lblDisplaySpeed
             // 
@@ -345,44 +348,41 @@
             this.lblDisplaySpeed.TabIndex = 4;
             this.lblDisplaySpeed.Text = "Speed:";
             // 
-            // txtDisplayStrength
+            // lblDisplayFaith
             // 
-            this.txtDisplayStrength.Enabled = false;
-            this.txtDisplayStrength.Location = new System.Drawing.Point(74, 19);
-            this.txtDisplayStrength.Name = "txtDisplayStrength";
-            this.txtDisplayStrength.Size = new System.Drawing.Size(37, 20);
-            this.txtDisplayStrength.TabIndex = 5;
+            this.lblDisplayFaith.AutoSize = true;
+            this.lblDisplayFaith.Location = new System.Drawing.Point(35, 100);
+            this.lblDisplayFaith.Name = "lblDisplayFaith";
+            this.lblDisplayFaith.Size = new System.Drawing.Size(33, 13);
+            this.lblDisplayFaith.TabIndex = 3;
+            this.lblDisplayFaith.Text = "Faith:";
             // 
-            // txtDisplayDexterity
+            // lblDisplayIntelligence
             // 
-            this.txtDisplayDexterity.Enabled = false;
-            this.txtDisplayDexterity.Location = new System.Drawing.Point(74, 45);
-            this.txtDisplayDexterity.Name = "txtDisplayDexterity";
-            this.txtDisplayDexterity.Size = new System.Drawing.Size(37, 20);
-            this.txtDisplayDexterity.TabIndex = 6;
+            this.lblDisplayIntelligence.AutoSize = true;
+            this.lblDisplayIntelligence.Location = new System.Drawing.Point(4, 74);
+            this.lblDisplayIntelligence.Name = "lblDisplayIntelligence";
+            this.lblDisplayIntelligence.Size = new System.Drawing.Size(64, 13);
+            this.lblDisplayIntelligence.TabIndex = 2;
+            this.lblDisplayIntelligence.Text = "Intelligence:";
             // 
-            // txtDisplayIntelligence
+            // lblDisplayDexterity
             // 
-            this.txtDisplayIntelligence.Enabled = false;
-            this.txtDisplayIntelligence.Location = new System.Drawing.Point(74, 71);
-            this.txtDisplayIntelligence.Name = "txtDisplayIntelligence";
-            this.txtDisplayIntelligence.Size = new System.Drawing.Size(37, 20);
-            this.txtDisplayIntelligence.TabIndex = 7;
+            this.lblDisplayDexterity.AutoSize = true;
+            this.lblDisplayDexterity.Location = new System.Drawing.Point(17, 48);
+            this.lblDisplayDexterity.Name = "lblDisplayDexterity";
+            this.lblDisplayDexterity.Size = new System.Drawing.Size(51, 13);
+            this.lblDisplayDexterity.TabIndex = 1;
+            this.lblDisplayDexterity.Text = "Dexterity:";
             // 
-            // txtDisplayFaith
+            // lblDisplayStrength
             // 
-            this.txtDisplayFaith.Enabled = false;
-            this.txtDisplayFaith.Location = new System.Drawing.Point(74, 97);
-            this.txtDisplayFaith.Name = "txtDisplayFaith";
-            this.txtDisplayFaith.Size = new System.Drawing.Size(37, 20);
-            this.txtDisplayFaith.TabIndex = 8;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(74, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 9;
+            this.lblDisplayStrength.AutoSize = true;
+            this.lblDisplayStrength.Location = new System.Drawing.Point(18, 22);
+            this.lblDisplayStrength.Name = "lblDisplayStrength";
+            this.lblDisplayStrength.Size = new System.Drawing.Size(50, 13);
+            this.lblDisplayStrength.TabIndex = 0;
+            this.lblDisplayStrength.Text = "Strength:";
             // 
             // lbxDisplayParty
             // 
@@ -395,7 +395,7 @@
             // 
             // btnCreateCharacter
             // 
-            this.btnCreateCharacter.Location = new System.Drawing.Point(116, 273);
+            this.btnCreateCharacter.Location = new System.Drawing.Point(119, 273);
             this.btnCreateCharacter.Name = "btnCreateCharacter";
             this.btnCreateCharacter.Size = new System.Drawing.Size(110, 34);
             this.btnCreateCharacter.TabIndex = 11;
@@ -437,7 +437,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 450);
+            this.ClientSize = new System.Drawing.Size(368, 453);
             this.Controls.Add(this.btnExitCreation);
             this.Controls.Add(this.gbxFinishCreation);
             this.Controls.Add(this.btnCreateCharacter);
