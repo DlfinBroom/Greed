@@ -40,7 +40,7 @@ namespace Greed {
 
         // Load/Delete methods
         private void btnLoad_Click(object sender, EventArgs e) {
-            frmEvent frmEve = new frmEvent();
+            tbxDialog frmEve = new tbxDialog();
             frmEve.Show();
             /*
             btnLD.Text = "Load";
@@ -76,7 +76,7 @@ namespace Greed {
                 if (btnLD.Text == "Load") {
                     // make new save file that == cbxSaveFile.SelectedItem
                     // pass that save file to frmEve
-                    frmEvent frmEve = new frmEvent();
+                    tbxDialog frmEve = new tbxDialog();
                     frmEve.Show();
                     Hide();
                 }

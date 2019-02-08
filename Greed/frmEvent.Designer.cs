@@ -1,5 +1,5 @@
 ﻿namespace Greed {
-    partial class frmEvent {
+    partial class tbxDialog {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -37,15 +37,17 @@
             this.btnBagOLoot = new System.Windows.Forms.Button();
             this.lblSkeleton = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnOption1 = new System.Windows.Forms.Button();
+            this.btnOption2 = new System.Windows.Forms.Button();
+            this.btnOption3 = new System.Windows.Forms.Button();
+            this.btnOption4 = new System.Windows.Forms.Button();
             this.lblDay = new System.Windows.Forms.Label();
+            this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
             // 
+            this.textBox1.Enabled = false;
             this.textBox1.Location = new System.Drawing.Point(146, 40);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
@@ -56,7 +58,7 @@
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(371, 236);
+            this.lblMoney.Location = new System.Drawing.Point(500, 236);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(69, 20);
             this.lblMoney.TabIndex = 1;
@@ -65,6 +67,7 @@
             // tbxChar1Health
             // 
             this.tbxChar1Health.Enabled = false;
+            this.tbxChar1Health.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbxChar1Health.Location = new System.Drawing.Point(12, 68);
             this.tbxChar1Health.Name = "tbxChar1Health";
             this.tbxChar1Health.Size = new System.Drawing.Size(80, 20);
@@ -73,6 +76,8 @@
             // 
             // tbxChar2Health
             // 
+            this.tbxChar2Health.Enabled = false;
+            this.tbxChar2Health.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tbxChar2Health.Location = new System.Drawing.Point(12, 118);
             this.tbxChar2Health.Name = "tbxChar2Health";
             this.tbxChar2Health.Size = new System.Drawing.Size(80, 20);
@@ -81,6 +86,8 @@
             // 
             // lblChar3Health
             // 
+            this.lblChar3Health.Enabled = false;
+            this.lblChar3Health.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblChar3Health.Location = new System.Drawing.Point(12, 168);
             this.lblChar3Health.Name = "lblChar3Health";
             this.lblChar3Health.Size = new System.Drawing.Size(80, 20);
@@ -89,6 +96,8 @@
             // 
             // lblChar4Health
             // 
+            this.lblChar4Health.Enabled = false;
+            this.lblChar4Health.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblChar4Health.Location = new System.Drawing.Point(12, 218);
             this.lblChar4Health.Name = "lblChar4Health";
             this.lblChar4Health.Size = new System.Drawing.Size(80, 20);
@@ -149,6 +158,7 @@
             this.btnBagOLoot.TabIndex = 11;
             this.btnBagOLoot.Text = "Bag O\' Loot";
             this.btnBagOLoot.UseVisualStyleBackColor = true;
+            this.btnBagOLoot.Click += new System.EventHandler(this.btnBagOLoot_Click);
             // 
             // lblSkeleton
             // 
@@ -158,54 +168,59 @@
             this.lblSkeleton.Size = new System.Drawing.Size(49, 13);
             this.lblSkeleton.TabIndex = 12;
             this.lblSkeleton.Text = "Skeletan";
+            this.lblSkeleton.Visible = false;
             // 
             // textBox2
             // 
+            this.textBox2.Enabled = false;
+            this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.textBox2.Location = new System.Drawing.Point(12, 268);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(80, 20);
             this.textBox2.TabIndex = 13;
             this.textBox2.Text = "|||||||||||||||||||||||||||||||||||";
+            this.textBox2.Visible = false;
+            this.textBox2.WordWrap = false;
             // 
-            // button1
+            // btnOption1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(375, 40);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 75);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnOption1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOption1.Location = new System.Drawing.Point(375, 40);
+            this.btnOption1.Name = "btnOption1";
+            this.btnOption1.Size = new System.Drawing.Size(175, 75);
+            this.btnOption1.TabIndex = 14;
+            this.btnOption1.Text = "button1";
+            this.btnOption1.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnOption2
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(556, 40);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 75);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnOption2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOption2.Location = new System.Drawing.Point(556, 40);
+            this.btnOption2.Name = "btnOption2";
+            this.btnOption2.Size = new System.Drawing.Size(175, 75);
+            this.btnOption2.TabIndex = 15;
+            this.btnOption2.Text = "button2";
+            this.btnOption2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnOption3
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(375, 121);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(175, 75);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnOption3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOption3.Location = new System.Drawing.Point(375, 121);
+            this.btnOption3.Name = "btnOption3";
+            this.btnOption3.Size = new System.Drawing.Size(175, 75);
+            this.btnOption3.TabIndex = 16;
+            this.btnOption3.Text = "button3";
+            this.btnOption3.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnOption4
             // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(556, 121);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(175, 75);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnOption4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOption4.Location = new System.Drawing.Point(556, 121);
+            this.btnOption4.Name = "btnOption4";
+            this.btnOption4.Size = new System.Drawing.Size(175, 75);
+            this.btnOption4.TabIndex = 17;
+            this.btnOption4.Text = "button4";
+            this.btnOption4.UseVisualStyleBackColor = true;
             // 
             // lblDay
             // 
@@ -217,16 +232,27 @@
             this.lblDay.TabIndex = 18;
             this.lblDay.Text = "Morning of day 1";
             // 
-            // frmEvent
+            // btnExit
+            // 
+            this.btnExit.Location = new System.Drawing.Point(375, 236);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(75, 75);
+            this.btnExit.TabIndex = 19;
+            this.btnExit.Text = "Exit, progress will NOT be saved";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Visible = false;
+            // 
+            // tbxDialog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(759, 336);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblDay);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnOption4);
+            this.Controls.Add(this.btnOption3);
+            this.Controls.Add(this.btnOption2);
+            this.Controls.Add(this.btnOption1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.lblSkeleton);
             this.Controls.Add(this.btnBagOLoot);
@@ -241,7 +267,7 @@
             this.Controls.Add(this.tbxChar1Health);
             this.Controls.Add(this.lblMoney);
             this.Controls.Add(this.textBox1);
-            this.Name = "frmEvent";
+            this.Name = "tbxDialog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEvent";
             this.ResumeLayout(false);
@@ -265,10 +291,11 @@
         private System.Windows.Forms.Button btnBagOLoot;
         private System.Windows.Forms.Label lblSkeleton;
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnOption1;
+        private System.Windows.Forms.Button btnOption2;
+        private System.Windows.Forms.Button btnOption3;
+        private System.Windows.Forms.Button btnOption4;
         private System.Windows.Forms.Label lblDay;
+        private System.Windows.Forms.Button btnExit;
     }
 }
