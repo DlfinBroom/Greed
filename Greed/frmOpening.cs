@@ -36,7 +36,6 @@ namespace Greed {
         private void btnNewGame_Click(object sender, EventArgs e) {
             frmCharacter frmChar = new frmCharacter();
             frmChar.Show();
-            //frmChar.DialogResult;
         }
 
         // Load/Delete methods
@@ -78,14 +77,13 @@ namespace Greed {
                     Hide();
                 }
                 else {
-                    // ToDo: finish this
+                    // delete the save file in the Db
                 }
             }
             else {
                 lblLDError.Text =
                     "Please select a save file to " + btnLD.Text.ToLower() + ".";
                 lblLDError.Visible = true;
-                //}
             }
         }
 
