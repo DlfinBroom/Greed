@@ -1,5 +1,5 @@
 ﻿namespace Greed {
-    partial class tbxDialog {
+    partial class frmEvent {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -23,7 +23,7 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.tbxDialog = new System.Windows.Forms.TextBox();
             this.lblMoney = new System.Windows.Forms.Label();
             this.tbxChar1Health = new System.Windows.Forms.TextBox();
             this.tbxChar2Health = new System.Windows.Forms.TextBox();
@@ -45,14 +45,14 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // tbxDialog
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(146, 40);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(200, 271);
-            this.textBox1.TabIndex = 0;
+            this.tbxDialog.Enabled = false;
+            this.tbxDialog.Location = new System.Drawing.Point(146, 40);
+            this.tbxDialog.Multiline = true;
+            this.tbxDialog.Name = "tbxDialog";
+            this.tbxDialog.Size = new System.Drawing.Size(200, 271);
+            this.tbxDialog.TabIndex = 0;
             // 
             // lblMoney
             // 
@@ -191,6 +191,7 @@
             this.btnOption1.TabIndex = 14;
             this.btnOption1.Text = "button1";
             this.btnOption1.UseVisualStyleBackColor = true;
+            this.btnOption1.Click += new System.EventHandler(this.btnOption1_Click);
             // 
             // btnOption2
             // 
@@ -201,6 +202,7 @@
             this.btnOption2.TabIndex = 15;
             this.btnOption2.Text = "button2";
             this.btnOption2.UseVisualStyleBackColor = true;
+            this.btnOption2.Click += new System.EventHandler(this.btnOption2_Click);
             // 
             // btnOption3
             // 
@@ -211,6 +213,7 @@
             this.btnOption3.TabIndex = 16;
             this.btnOption3.Text = "button3";
             this.btnOption3.UseVisualStyleBackColor = true;
+            this.btnOption3.Click += new System.EventHandler(this.btnOption3_Click);
             // 
             // btnOption4
             // 
@@ -221,6 +224,7 @@
             this.btnOption4.TabIndex = 17;
             this.btnOption4.Text = "button4";
             this.btnOption4.UseVisualStyleBackColor = true;
+            this.btnOption4.Click += new System.EventHandler(this.btnOption4_Click);
             // 
             // lblDay
             // 
@@ -242,7 +246,7 @@
             this.btnExit.UseVisualStyleBackColor = true;
             this.btnExit.Visible = false;
             // 
-            // tbxDialog
+            // frmEvent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -266,8 +270,8 @@
             this.Controls.Add(this.tbxChar2Health);
             this.Controls.Add(this.tbxChar1Health);
             this.Controls.Add(this.lblMoney);
-            this.Controls.Add(this.textBox1);
-            this.Name = "tbxDialog";
+            this.Controls.Add(this.tbxDialog);
+            this.Name = "frmEvent";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEvent";
             this.ResumeLayout(false);
@@ -277,7 +281,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox tbxDialog;
         private System.Windows.Forms.Label lblMoney;
         private System.Windows.Forms.TextBox tbxChar1Health;
         private System.Windows.Forms.TextBox tbxChar2Health;
