@@ -51,6 +51,7 @@ namespace Greed {
             lblLDError.Location =
                 new Point(cbxSaveFiles.Location.X, cbxSaveFiles.Location.Y + 25);
             populateSaveFiles();
+            Hide();
         }
         private void btnDelete_Click(object sender, EventArgs e) {
             btnLD.Text = "Delete";
