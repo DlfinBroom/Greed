@@ -60,7 +60,7 @@ namespace Greed {
         }
 
         private void btnBagOLoot_Click(object sender, EventArgs e) {
-            frmLoot frmLoot = new frmLoot();
+            gbxShop frmLoot = new gbxShop();
             frmLoot.Show();
         }
 

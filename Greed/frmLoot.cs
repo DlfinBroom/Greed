@@ -9,8 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Greed {
-    public partial class frmLoot : Form {
-        public frmLoot() {
+    public partial class gbxShop : Form {
+        public gbxShop() {
             InitializeComponent();
         }
     }
