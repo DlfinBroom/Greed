@@ -86,7 +86,7 @@ namespace Greed {
             string Path2 = "Forest";
             string Path3 = "Mountain Path";
             string Battle = "Battle!";
-            string NightBattle = "Servive!";
+            string NightBattle = "Fight!";
             string HeadBack = "Head Back";
             string Rest = "Rest(25g)";
             string NotRest = "Sleep is for the weak!";
