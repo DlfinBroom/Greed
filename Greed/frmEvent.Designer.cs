@@ -47,10 +47,11 @@
             // 
             // tbxDialog
             // 
-            this.tbxDialog.Enabled = false;
             this.tbxDialog.Location = new System.Drawing.Point(146, 40);
             this.tbxDialog.Multiline = true;
             this.tbxDialog.Name = "tbxDialog";
+            this.tbxDialog.ReadOnly = true;
+            this.tbxDialog.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.tbxDialog.Size = new System.Drawing.Size(200, 271);
             this.tbxDialog.TabIndex = 0;
             // 
