@@ -98,6 +98,7 @@
     <Compile Include="LootDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SaveFile.cs" />
     <Compile Include="SaveFileDB.cs" />
     <EmbeddedResource Include="frmEvent.resx">
       <DependentUpon>frmEvent.cs</DependentUpon>
