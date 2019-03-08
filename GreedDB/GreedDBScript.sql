@@ -1,25 +1,17 @@
 ﻿
--- if GreedDataBase exists, destroy it first
-Create Database GreedDataBase;
+use master;
+if EXISTS(select * from sys.databases where name='GreedDB')
+drop database GreedDB;
+go
+
+Create Database GreedDB;
 Go
 
-Create Table Characters(
-	CharID		int Primary key,
-	[Name]		varchar(20) not null,
-	Class		varchar(7)	not null,
-	Gender		varchar(6)	not null,
-	MaxHealth	int			not null,
-	CurrHealth	int			not null,
-	MaxMana		int			not null,
-	CurrMana	int			not null,
-	IsDead		int			not null,
-	TimesDied	int			not null,
-	EquipedWeaponID int		not null,
-	EquipedArmorID int		not null
-);
+use GreedDB
+go
 
 Create Table Loot(
-	LootID int Primary key,
+	LootID			int Primary key,
 	[Name]			varchar(20) not null,
 	LootCategory	varchar(6)	not null,
 	LootType		varchar(10)	not null,
@@ -29,24 +21,39 @@ Create Table Loot(
 	Quality			int			null,
 );
 
+Create Table Characters(
+	CharID			int Primary key,
+	[Name]			varchar(20) not null,
+	Class			varchar(7)	not null,
+	Gender			varchar(6)	not null,
+	MaxHealth		int			not null,
+	CurrHealth		int			not null,
+	MaxMana			int			not null,
+	CurrMana		int			not null,
+	IsDead			int			not null,
+	TimesDied		int			not null,
+	EquipArmorID	int foreign key references Loot(LootID) not null,
+	EquipWeaponID	int foreign key references Loot(LootID) not null
+);
+
 Create Table Enemy(
 	EnemyID int Primary key,
-	[Name] varchar(20) not null,
-	MaxHealth	int	   not null,
-	Attack		int    not null,
-	Defence		int    not null,
-	Speed		int    not null,
-	LootChance	int    not null,
-	Dificulty	int    not null,
+	[Name] varchar(20)		not null,
+	MaxHealth	int			not null,
+	Attack		int			not null,
+	Defence		int			not null,
+	Speed		int			not null,
+	LootChance	int			not null,
+	Dificulty	int			not null,
 	AreaType	varchar(10) not null
 );
 
 Create Table SaveFile(
 	PartyName varchar(25) Primary key,
-	Char1ID		int not null,
-	Char2ID		int not null,
-	Char3ID		int not null,
-	Char4ID		int not null,
+	Char1ID		int foreign key references [Character](CharID),
+	Char2ID		int foreign key references [Character](CharID),
+	Char3ID		int foreign key references [Character](CharID),
+	Char4ID		int foreign key references [Character](CharID),
 	[Money]		int not null,
 	SHealPotion int not null,
 	MHealPotion int not null,
