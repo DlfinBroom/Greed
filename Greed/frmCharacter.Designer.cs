@@ -45,7 +45,7 @@
             this.txtDisplayMaxMana = new System.Windows.Forms.TextBox();
             this.lblMaxMana = new System.Windows.Forms.Label();
             this.gbxAttributes = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDisplaySpeed = new System.Windows.Forms.TextBox();
             this.txtDisplayFaith = new System.Windows.Forms.TextBox();
             this.txtDisplayIntelligence = new System.Windows.Forms.TextBox();
             this.txtDisplayDexterity = new System.Windows.Forms.TextBox();
@@ -106,9 +106,9 @@
             this.rbnRanger.Name = "rbnRanger";
             this.rbnRanger.Size = new System.Drawing.Size(60, 17);
             this.rbnRanger.TabIndex = 5;
-            this.rbnRanger.TabStop = true;
             this.rbnRanger.Text = "Ranger";
             this.rbnRanger.UseVisualStyleBackColor = true;
+            this.rbnRanger.CheckedChanged += new System.EventHandler(this.rbnRanger_CheckedChanged);
             // 
             // rbnRouge
             // 
@@ -117,9 +117,9 @@
             this.rbnRouge.Name = "rbnRouge";
             this.rbnRouge.Size = new System.Drawing.Size(57, 17);
             this.rbnRouge.TabIndex = 4;
-            this.rbnRouge.TabStop = true;
             this.rbnRouge.Text = "Rouge";
             this.rbnRouge.UseVisualStyleBackColor = true;
+            this.rbnRouge.CheckedChanged += new System.EventHandler(this.rbnRouge_CheckedChanged);
             // 
             // rbnCleric
             // 
@@ -128,9 +128,9 @@
             this.rbnCleric.Name = "rbnCleric";
             this.rbnCleric.Size = new System.Drawing.Size(51, 17);
             this.rbnCleric.TabIndex = 3;
-            this.rbnCleric.TabStop = true;
             this.rbnCleric.Text = "Cleric";
             this.rbnCleric.UseVisualStyleBackColor = true;
+            this.rbnCleric.CheckedChanged += new System.EventHandler(this.rbnCleric_CheckedChanged);
             // 
             // rbnMage
             // 
@@ -139,9 +139,9 @@
             this.rbnMage.Name = "rbnMage";
             this.rbnMage.Size = new System.Drawing.Size(52, 17);
             this.rbnMage.TabIndex = 2;
-            this.rbnMage.TabStop = true;
             this.rbnMage.Text = "Mage";
             this.rbnMage.UseVisualStyleBackColor = true;
+            this.rbnMage.CheckedChanged += new System.EventHandler(this.rbnMage_CheckedChanged);
             // 
             // rbnWarrior
             // 
@@ -150,13 +150,14 @@
             this.rbnWarrior.Name = "rbnWarrior";
             this.rbnWarrior.Size = new System.Drawing.Size(59, 17);
             this.rbnWarrior.TabIndex = 1;
-            this.rbnWarrior.TabStop = true;
             this.rbnWarrior.Text = "Warrior";
             this.rbnWarrior.UseVisualStyleBackColor = true;
+            this.rbnWarrior.CheckedChanged += new System.EventHandler(this.rbnWarrior_CheckedChanged);
             // 
             // rbnKnight
             // 
             this.rbnKnight.AutoSize = true;
+            this.rbnKnight.Checked = true;
             this.rbnKnight.Location = new System.Drawing.Point(7, 19);
             this.rbnKnight.Name = "rbnKnight";
             this.rbnKnight.Size = new System.Drawing.Size(55, 17);
@@ -164,6 +165,7 @@
             this.rbnKnight.TabStop = true;
             this.rbnKnight.Text = "Knight";
             this.rbnKnight.UseVisualStyleBackColor = true;
+            this.rbnKnight.CheckedChanged += new System.EventHandler(this.rbnKnight_CheckedChanged);
             // 
             // lblCharacterName
             // 
@@ -176,7 +178,6 @@
             // 
             // txtCharacterName
             // 
-            this.txtCharacterName.Enabled = false;
             this.txtCharacterName.Location = new System.Drawing.Point(105, 11);
             this.txtCharacterName.Name = "txtCharacterName";
             this.txtCharacterName.Size = new System.Drawing.Size(102, 20);
@@ -207,6 +208,7 @@
             // rbnMale
             // 
             this.rbnMale.AutoSize = true;
+            this.rbnMale.Checked = true;
             this.rbnMale.Location = new System.Drawing.Point(7, 20);
             this.rbnMale.Name = "rbnMale";
             this.rbnMale.Size = new System.Drawing.Size(48, 17);
@@ -283,7 +285,7 @@
             // 
             // gbxAttributes
             // 
-            this.gbxAttributes.Controls.Add(this.textBox1);
+            this.gbxAttributes.Controls.Add(this.txtDisplaySpeed);
             this.gbxAttributes.Controls.Add(this.txtDisplayFaith);
             this.gbxAttributes.Controls.Add(this.txtDisplayIntelligence);
             this.gbxAttributes.Controls.Add(this.txtDisplayDexterity);
@@ -300,13 +302,13 @@
             this.gbxAttributes.TabStop = false;
             this.gbxAttributes.Text = "Attributes:";
             // 
-            // textBox1
+            // txtDisplaySpeed
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(74, 123);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(37, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtDisplaySpeed.Enabled = false;
+            this.txtDisplaySpeed.Location = new System.Drawing.Point(74, 123);
+            this.txtDisplaySpeed.Name = "txtDisplaySpeed";
+            this.txtDisplaySpeed.Size = new System.Drawing.Size(37, 20);
+            this.txtDisplaySpeed.TabIndex = 9;
             // 
             // txtDisplayFaith
             // 
@@ -452,6 +454,7 @@
             this.Name = "frmCharacter";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Character Creation";
+            this.Load += new System.EventHandler(this.frmCharacter_Load);
             this.gbxClassSelection.ResumeLayout(false);
             this.gbxClassSelection.PerformLayout();
             this.gbxGender.ResumeLayout(false);
@@ -491,7 +494,7 @@
         private System.Windows.Forms.GroupBox gbxAttributes;
         private System.Windows.Forms.TextBox txtDisplayDefense;
         private System.Windows.Forms.Label lblDisplayDefense;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDisplaySpeed;
         private System.Windows.Forms.TextBox txtDisplayFaith;
         private System.Windows.Forms.TextBox txtDisplayIntelligence;
         private System.Windows.Forms.TextBox txtDisplayDexterity;
