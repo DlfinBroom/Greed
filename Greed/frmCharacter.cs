@@ -90,5 +90,34 @@ namespace Greed {
             txtDisplayFaith.Text = "3";
             txtDisplaySpeed.Text = "7";
         }
+
+        private void btnCreateCharacter_Click(object sender, EventArgs e)
+        {
+            //Assigning the Character Name
+            string name = txtCharacterName.Text;
+
+            //Asssigning the class variable
+            string charClass = "";
+            if (rbnKnight.Checked == true)
+                charClass = "Knight";
+            else if (rbnWarrior.Checked == true)
+                charClass = "Warrior";
+            else if (rbnMage.Checked == true)
+                charClass = "Mage";
+            else if (rbnCleric.Checked == true)
+                charClass = "Cleric";
+            else if (rbnRouge.Checked == true)
+                charClass = "Rouge";
+            else if (rbnRanger.Checked == true)
+                charClass = "Ranger";
+
+            //Assigning the gender variable
+            string gender = "Male";
+            if (rbnFemale.Checked == true)
+                gender = "Female";
+
+            //Creating the Character Object
+            Character character = new Character(name, charClass, gender);
+        }
     }
 }

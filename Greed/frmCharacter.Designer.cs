@@ -404,6 +404,7 @@
             this.btnCreateCharacter.TabIndex = 11;
             this.btnCreateCharacter.Text = "Create Character";
             this.btnCreateCharacter.UseVisualStyleBackColor = true;
+            this.btnCreateCharacter.Click += new System.EventHandler(this.btnCreateCharacter_Click);
             // 
             // gbxFinishCreation
             // 
