@@ -11,7 +11,7 @@ namespace Greed {
         /// <summary>
         /// Determines if the loot is a weapon or armor
         /// </summary>
-        public bool IsArmor { get; set; }
+        public string LootCategory { get; set; }
 
         /// <summary>
         /// Ex. Axe, Bow, Light armor, etc.
