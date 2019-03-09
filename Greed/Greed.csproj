@@ -103,6 +103,9 @@
     <EmbeddedResource Include="frmEvent.resx">
       <DependentUpon>frmEvent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmCharacter.resx">
+      <DependentUpon>frmCharacter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOpening.resx">
       <DependentUpon>frmOpening.cs</DependentUpon>
     </EmbeddedResource>
