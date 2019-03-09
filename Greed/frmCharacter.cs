@@ -14,6 +14,8 @@ namespace Greed {
             InitializeComponent();
         }
 
+        List<Character> party = new List<Character>();
+
         private void frmCharacter_Load(object sender, EventArgs e)
         {
             rbnKnight_CheckedChanged(sender, e);
@@ -95,6 +97,11 @@ namespace Greed {
         {
             //Assigning the Character Name
             string name = txtCharacterName.Text;
+            if (name.Equals("") || name.Equals(null))
+            {
+                MessageBox.Show("Character must have a valid name");
+                return;
+            }
 
             //Asssigning the class variable
             string charClass = "";
@@ -118,6 +125,19 @@ namespace Greed {
 
             //Creating the Character Object
             Character character = new Character(name, charClass, gender);
+
+            //Sending the character object to a new method
+            DisplayCharacters(character);
+        }
+
+        private void DisplayCharacters(Character character)
+        {
+            party.Add(character);
+
+            foreach (Character c in party)
+            {
+                //Display in listbox item
+            }
         }
     }
 }
