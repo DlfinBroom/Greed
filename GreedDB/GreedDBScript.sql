@@ -21,7 +21,7 @@ Create Table Loot(
 	Quality			int			null,
 );
 
-Create Table Characters(
+Create Table [Character](
 	CharID			int Primary key,
 	[Name]			varchar(20) not null,
 	Class			varchar(7)	not null,
