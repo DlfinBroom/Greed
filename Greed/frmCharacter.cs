@@ -126,17 +126,40 @@ namespace Greed {
             //Creating the Character Object
             Character character = new Character(name, charClass, gender);
 
+            //Adding Character object to party List
+            party.Add(character);
+
             //Sending the character object to a new method
-            DisplayCharacters(character);
+            DisplayCharacters();
+
+            CheckNumCharacters();
         }
 
-        private void DisplayCharacters(Character character)
+        private void DisplayCharacters()
         {
-            party.Add(character);
+            //Clears the items in the list box so that it doesn't redisplay characters
+            lbxDisplayParty.Items.Clear();
+
+            //Display characters in listbox
+            lbxDisplayParty.DisplayMember = "Name";
 
             foreach (Character c in party)
             {
-                //Display in listbox item
+                lbxDisplayParty.Items.Add(c);
+            }
+        }
+
+        private void CheckNumCharacters()
+        {
+            if (lbxDisplayParty.Items.Count == 4)
+            {
+                txtCharacterName.Enabled = false;
+                gbxClassSelection.Enabled = false;
+                gbxGender.Enabled = false;
+                btnCreateCharacter.Enabled = false;
+
+                txtPartyName.Enabled = true;
+                btnCreateParty.Enabled = true;
             }
         }
     }

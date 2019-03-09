@@ -46,6 +46,12 @@ namespace Greed {
         //How many times the character has died
         public byte TimesDied { get; set; }
 
+        /// <summary>
+        /// Constructor for a character object
+        /// </summary>
+        /// <param name="name">The Given name of the created object</param>
+        /// <param name="charClass">The character class, EX. Knight, Mage, Rouge, etc.</param>
+        /// <param name="gender">Ex. Male or Female</param>
         public Character(string name, string charClass, string gender)
         {
             Name = name;
@@ -120,6 +126,11 @@ namespace Greed {
 
             IsDead = false;
             TimesDied = 0;
+        }
+
+        public string ToString()
+        {
+            return Name;
         }
     }
 }
