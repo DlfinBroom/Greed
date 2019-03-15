@@ -12,8 +12,8 @@ namespace Greed {
             SqlCommand looCmd = new SqlCommand();
             looCmd.Connection = con;
             looCmd.CommandText = 
-                "Select LootName, LootCategory, LootType" +
-                "From Loot" +
+                "Select LootName, LootCategory, LootType " +
+                "From Loot " +
                 "Where Level is null and Name is not null";
 
             con.Open();
