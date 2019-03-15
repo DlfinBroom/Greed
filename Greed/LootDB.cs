@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,11 +8,32 @@ using System.Threading.Tasks;
 namespace Greed {
     class LootDB {
         public List<Loot> GetLoot(int rarity, byte amount, byte area) {
-            throw new NotImplementedException();
-            // get all weapons/armor that are null in DB
+            SqlConnection con = GreedDBCon.GetConnection();
+            SqlCommand looCmd = new SqlCommand();
+            looCmd.Connection = con;
+            looCmd.CommandText = 
+                "Select LootName, LootCategory, LootType" +
+                "From Loot" +
+                "Where Level is null and Name is not null";
+
+            con.Open();
+
+            SqlDataReader rdr = looCmd.ExecuteReader();
+            List<Loot> loots = new List<Loot>();
+            while (rdr.Read()) {
+                Loot loo = new Loot();
+                loo.Name = (string)rdr["LootName"];
+                loo.LootCategory = (string)rdr["LootCategory"];
+                loo.LootType = (string)rdr["LootType"];
+
+                loots.Add(loo);
+            }
+
+            con.Dispose();
+            return FilterLoot(loots, rarity, amount, area);
         }
 
-        private List<Loot> FilterLoot(List<Loot> DBLoot, byte rarity, byte amount, byte area) {
+        private List<Loot> FilterLoot(List<Loot> DBLoot, int rarity, byte amount, byte area) {
             // Adds stuff to each peice of loot
             foreach(Loot loot in DBLoot) {
                 if (rarity == 1) { loot.Quality = (byte)RandomNum(1, 3); }

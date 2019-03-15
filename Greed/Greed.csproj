@@ -94,6 +94,7 @@
     <Compile Include="frmOpening.Designer.cs">
       <DependentUpon>frmOpening.cs</DependentUpon>
     </Compile>
+    <Compile Include="GreedDBCon.cs" />
     <Compile Include="Loot.cs" />
     <Compile Include="LootDB.cs" />
     <Compile Include="Program.cs" />
