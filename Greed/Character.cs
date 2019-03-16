@@ -46,6 +46,9 @@ namespace Greed {
         //How many times the character has died
         public byte TimesDied { get; set; }
 
+        public Loot EquipedArmor { get; set; }
+        public Loot EquipedWeapon { get; set; }
+
         /// <summary>
         /// Constructor for a character object
         /// </summary>

@@ -6,8 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Greed {
-    class LootDB {
-        public List<Loot> GetLoot(int rarity, byte amount, byte area) {
+    static class LootDB {
+        public static List<Loot> GetLoot(int rarity, byte amount, byte area) {
             SqlConnection con = GreedDBCon.GetConnection();
             SqlCommand looCmd = new SqlCommand();
             looCmd.Connection = con;
@@ -33,7 +33,7 @@ namespace Greed {
             return FilterLoot(loots, rarity, amount, area);
         }
 
-        private List<Loot> FilterLoot(List<Loot> DBLoot, int rarity, byte amount, byte area) {
+        private static List<Loot> FilterLoot(List<Loot> DBLoot, int rarity, byte amount, byte area) {
             // Adds stuff to each peice of loot
             foreach(Loot loot in DBLoot) {
                 if (rarity == 1) { loot.Quality = (byte)RandomNum(1, 3); }
@@ -55,10 +55,104 @@ namespace Greed {
             return BagOLoot;
         }
 
-        private int RandomNum(int min, int max) {
+        private static int RandomNum(int min, int max) {
             Random ran = new Random(DateTime.Now.Millisecond);
             int num = ran.Next(min, max);
             return num;
+        }
+
+        public static int[] AddCharLoot(Loot arm, Loot wep) {
+            SqlConnection con = GreedDBCon.GetConnection();
+
+            SqlCommand armCmd = new SqlCommand();
+            armCmd.Connection = con;
+            armCmd.CommandText =
+                "Insert into " +
+                "Loot(" +
+                    "LootName, " +
+                    "LootCategory, " +
+                    "LootType, " +
+                    "[Level], " +
+                    "MagicStat, " +
+                    "MagicStatIncre, " +
+                    "Quality" +
+                ") OUTPUT INSERTED.LootID " +
+                "Values(" +
+                    arm.Name + ", " +
+                    arm.LootCategory + ", " +
+                    arm.LootType + ", " +
+                    arm.Level + ", " +
+                    arm.MagicStat + ", " +
+                    arm.MagicStatIncr + ", " +
+                    arm.Quality +
+                ")";
+            SqlCommand wepCmd = new SqlCommand();
+            wepCmd.Connection = con;
+            wepCmd.CommandText =
+                "Insert into " +
+                "Loot(" +
+                    "LootName, " +
+                    "LootCategory, " +
+                    "LootType, " +
+                    "[Level], " +
+                    "MagicStat, " +
+                    "MagicStatIncre, " +
+                    "Quality" +
+                ") OUTPUT INSERTED.LootID" +
+                "Values(" +
+                    wep.Name + ", " +
+                    wep.LootCategory + ", " +
+                    wep.LootType + ", " +
+                    wep.Level + ", " +
+                    wep.MagicStat + ", " +
+                    wep.MagicStatIncr + ", " +
+                    wep.Quality +
+                ")";
+            con.Open();
+
+            int[] LooIDs = new int[2];
+            LooIDs[0] = (int)armCmd.ExecuteScalar();
+            LooIDs[1] = (int)wepCmd.ExecuteScalar();
+
+            con.Dispose();
+            return LooIDs;
+        }
+
+        public static int[] AddLootList(List<Loot> loots) {
+            SqlConnection con = GreedDBCon.GetConnection();
+
+            SqlCommand looCmd = new SqlCommand();
+            looCmd.Connection = con;
+
+            int[] IDArray = new int[loots.Count];
+            int counter = 0;
+
+            con.Open();
+            foreach (Loot loo in loots) {
+                looCmd.CommandText =
+                "Insert into " +
+                "Loot(" +
+                    "LootName, " +
+                    "LootCategory, " +
+                    "LootType, " +
+                    "[Level], " +
+                    "MagicStat, " +
+                    "MagicStatIncre, " +
+                    "Quality" +
+                ") OUTPUT INSERTED.LootID " +
+                "Values(" +
+                    loo.Name + ", " +
+                    loo.LootCategory + ", " +
+                    loo.LootType + ", " +
+                    loo.Level + ", " +
+                    loo.MagicStat + ", " +
+                    loo.MagicStatIncr +
+                ")";
+                IDArray[counter] = (int)looCmd.ExecuteScalar();
+                counter++;
+            }
+            con.Dispose();
+            return IDArray;
         }
     }
 }
