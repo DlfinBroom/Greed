@@ -66,5 +66,21 @@ namespace Greed {
                 con.Dispose();
             }
         }
+
+        public bool DeleteSaveFile( string PartyName ) {
+
+        }
+
+        public SaveFile GetSaveFile() {
+
+        }
+
+        public bool UpdateSaveFile(SaveFile sav) {
+            if (DeleteSaveFile(sav.PartyName)) {
+                AddSaveFile(sav);
+                return true;
+            }
+            return false;
+        }
     }
 }
